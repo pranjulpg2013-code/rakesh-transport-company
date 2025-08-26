@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Rakesh Transport — Kanpur’s Reliable Transport Since 1991</title>
+  <meta name="description" content="Specialized in agricultural, industrial, and construction transport. Kanpur’s trusted transporter since 1991. Call: 08840521041" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --accent:#f5b700;
+      --primary:#22223b;
+      --muted:#4a4e69;
+      --bg:#f8fafc;
+      --card:#fff;
+      --icon:#ff9800;
+    }
+    *{box-sizing:border-box}
+    body{
+      font-family:'Inter',system-ui,Segoe UI,Roboto,Arial;
+      margin:0;background:var(--bg);
+      color:var(--primary);line-height:1.5;
+    }
+    .container{max-width:1150px;margin:0 auto;padding:32px}
+    header{display:flex;align-items:center;justify-content:space-between;padding:18px 0}
+    .logo{display:flex;align-items:center;gap:14px}
+    .logo .mark{
+      width:56px;height:56px;
+      border-radius:12px;
+      background:linear-gradient(135deg,var(--accent),#fffde4);
+      display:flex;align-items:center;justify-content:center;
+      font-size:2rem;color:#fff;font-weight:700;
+      box-shadow:0 2px 16px #22223b20;
+    }
+    nav a{margin-left:20px;text-decoration:none;color:var(--muted);font-size:16px;font-weight:600;transition:.2s}
+    nav a:hover{color:var(--accent)}
+    /* Hero */
+    .hero{display:grid;grid-template-columns:1fr 430px;gap:38px;background:#fff;border-radius:18px;align-items:center;padding:38px 0;box-shadow:0 8px 32px #22223b11}
+    .eyebrow{color:var(--accent);font-weight:700;letter-spacing:2px;text-transform:uppercase}
+    h1{font-size:40px;margin:12px 0;}
+    p.lead{color:var(--muted);font-size:18px;margin:18px 0 32px}
+    .cta{display:inline-block;padding:14px 28px;border-radius:10px;background:var(--accent);color:#222;font-size:18px;text-decoration:none;font-weight:700;border:none;box-shadow:0 2px 8px #f5b70033}
+    .stats{display:flex;gap:24px;margin-top:30px}
+    .stat{background:#f8fafc;padding:16px;border-radius:14px;text-align:center;min-width:100px;box-shadow:0 4px 18px #22223b13;font-weight:600}
+    .stat .small{color:var(--muted);}
+    .card{background:var(--card);padding:22px;border-radius:18px;box-shadow:0 6px 24px #22223b10;text-align:center;}
+    /* Services */
+    #services{margin-top:46px}
+    #services h2{font-size:2rem;color:var(--primary);}
+    .services{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin:24px 0}
+    .service{background:var(--card);padding:22px 16px;border-radius:14px;box-shadow:0 2px 8px #22223b11;text-align:center}
+    .service-icon{width:52px;height:52px;margin:0 auto 12px;background:var(--icon);border-radius:50%;display:flex;align-items:center;justify-content:center;}
+    .service-icon svg{width:32px;height:32px;fill:#fff}
+    .service-title{font-weight:700;font-size:18px;margin-bottom:10px;}
+    .service-desc{color:var(--muted);font-size:15px;}
+    /* About & Contact */
+    .two-col{display:grid;grid-template-columns:1fr 420px;gap:38px;margin-bottom:38px}
+    #about h3{margin-top:0;}
+    .about-list{margin:12px 0 0 18px; color:var(--muted);}
+    .pill{display:flex;gap:10px;align-items:center;padding:14px;border-radius:10px;background:var(--card);border:1px solid #eee;font-size:16px;margin-bottom:10px}
+    .contact-form{background:var(--card);border-radius:14px;padding:18px;box-shadow:0 2px 6px #22223b09;margin-top:18px;}
+    .contact-form label{display:block;margin-bottom:8px;font-weight:700;}
+    .contact-form input,.contact-form textarea{
+      width:100%;padding:10px;margin-bottom:14px;border-radius:8px;border:1px solid #d4dbe4;font-size:16px;
+    }
+    .contact-form button{
+      padding:11px 22px;
+      background:var(--accent);
+      color:#222;font-weight:700;border:none;border-radius:8px;
+      box-shadow:0 1px 5px #f5b70044;
+      cursor:pointer;
+    }
+    /* Footer */
+    footer{padding:28px 0;color:var(--muted);font-size:15px;border-top:1px solid #eee;text-align:center;margin-top:46px;}
+    /* Responsive */
+    @media (max-width:950px){
+      .hero,.two-col{grid-template-columns:1fr;}
+      .services{grid-template-columns:repeat(2,1fr);}
+    }
+    @media (max-width:590px){
+      h1{font-size:1.6rem;}
+      #services h2{font-size:1.2rem;}
+      .services{grid-template-columns:1fr;}
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="logo">
+        <div class="mark">RT</div>
+        <div>
+          <div style="font-weight:700;font-size:18px">Rakesh Transport</div>
+          <div class="small" style="color:var(--muted)">Kanpur • Uttar Pradesh</div>
+        </div>
+      </div>
+      <nav>
+        <a href="#services">Services</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <div>
+        <div class="eyebrow">OUR SERVICES</div>
+        <h1>Kanpur’s Reliable Logistics Partner — Since 1991</h1>
+        <p class="lead">With over 33 years of expertise, Rakesh Transport specializes in transporting agricultural produce, cement, construction materials, and heavy industrial machinery. Our family-run business is dedicated to safe and timely deliveries, secure loading, and personalized support across Kanpur and North India. </p>
+        <a class="cta" href="tel:08840521041">Call: 08840521041</a>
+        <div class="stats">
+          <div class="stat"><div style="font-size:30px;">33+</div><div class="small">Years of Experience</div></div>
+          <div class="stat"><div style="font-size:30px;">Since 1991</div><div class="small">Established</div></div>
+          <div class="stat"><div style="font-size:30px;">30000+</div><div class="small">Clients Served</div></div>
+          <div class="stat"><div style="font-size:30px;">24/7</div><div class="small">Customer Support</div></div>
+        </div>
+      </div>
+      <aside class="card">
+        <!-- Truck-related image -->
+ <img src="https://images.unsplash.com/photo-1591768793355-74d04bb6608f?q=80&w=2944&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Blue and white truck on road" style="width:100%;border-radius:10px;display:block;margin-bottom:10px" />
+
+        <div style="font-weight:700">Service Area & Live Booking</div>
+        <div class="small" style="color:var(--muted)">Kanpur, Rath, Mahoba, and all nearby cities. Real-time rates, instant booking & tracking transport platform.</div>
+      </aside>
+    </section>
+
+    <section id="services">
+      <h2>What We Transport</h2>
+      <div class="services">
+        <div class="service">
+          <div class="service-icon">
+            <!-- Farm/industry icon -->
+            <svg viewBox="0 0 24 24"><path d="M2 18v-4a6 6 0 0 1 6-6h8a6 6 0 0 1 6 6v4z" fill="#fff"/><circle cx="7" cy="12" r="3" fill="#fff"/></svg>
+          </div>
+          <div class="service-title">Agricultural, Cement, and Machinery</div>
+          <div class="service-desc">Specialized fleet for bulk agricultural produce, bagged cement, heavy construction materials, and industrial machinery. Our trucks are equipped for secure loading and robust transport, meeting industry standards for safety and reliability, tailored for farms, construction sites, and manufacturers.</div>
+        </div>
+        <div class="service">
+          <div class="service-icon">
+            <!-- Box/goods icon -->
+            <svg viewBox="0 0 24 24"><rect x="3" y="9" width="18" height="13" rx="2" fill="#fff"/><rect x="8" y="3" width="8" height="6" rx="2" fill="#fff"/></svg>
+          </div>
+          <div class="service-title">Small & Large Goods</div>
+          <div class="service-desc">From single cartons to large consignments, we offer secure loading, packaging guidance, and protection for personal, business, or industrial shipments. Our team ensures every parcel is handled safely, minimizing risk and maximizing efficiency across every kilometer.</div>
+        </div>
+        <div class="service">
+          <div class="service-icon">
+            <!-- Route icon -->
+            <svg viewBox="0 0 24 24"><path d="M3 12h18M12 3v18" stroke="#fff" stroke-width="2" fill="none"/></svg>
+          </div>
+          <div class="service-title">Intercity and Local Routes</div>
+          <div class="service-desc">We cover scheduled and custom routes across Kanpur, Mahoba, Rath and beyond. Flexible timing, professional drivers and optimized logistics for single-drop, multi-stop, and repeat shipments.</div>
+        </div>
+        <div class="service">
+          <div class="service-icon">
+            <!-- Value icon -->
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="12" fill="#fff"/><path d="M8 15h8M8 9h8" stroke="#fff" stroke-width="2"/></svg>
+          </div>
+          <div class="service-title">Fleet and Added Value</div>
+          <div class="service-desc">Access to our complete fleet for B2B contracts, material handling, warehousing on request, live shipment tracking, and customized services for unique transport needs.</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="two-col">
+      <div id="about">
+        <h3>About Rakesh Transport</h3>
+        <p>Founded in 1991, Rakesh Transport is Kanpur’s specialist for farm, industry, and infrastructure logistics. We are committed to safe deliveries, timely pickups, and responsive communication. Our veteran drivers and robust fleet make us the trusted choice for thousands.</p>
+        <ul class="about-list">
+          <li><strong>Experience:</strong> 33+ years of local & intercity expertise</li>
+          <li><strong>Specialization:</strong> Agriculture, construction, industrial goods, cement, machinery</li>
+          <li><strong>Clients:</strong> 30,000+ delivered with punctuality & care</li>
+          <li><strong>Support:</strong> Transparent pricing, responsive 24/7 support</li>
+        </ul>
+      </div>
+      <aside id="contact">
+        <div class="pill">
+          <b>Call:</b>
+          <div style="margin-left:auto"><a style="color:var(--accent);font-weight:700;text-decoration:none" href="tel:08840521041">08840521041</a></div>
+        </div>
+        <div class="pill">
+          <b>Email:</b>
+          <div style="margin-left:auto;color:var(--muted)">gupta.anil735@gmail.com</div>
+        </div>
+        <div class="pill">
+          <b>Service area:</b>
+          <div style="margin-left:auto;color:var(--muted)">Kanpur, Rath, Mahoba & Nearby Cities</div>
+        </div>
+        <form class="contact-form" action="mailto:gupta.anil735@gmail.com" method="GET">
+          <label>Request a quote</label>
+          <input name="subject" placeholder="Subject (e.g. Transport Quote)" />
+          <textarea name="body" placeholder="Details: Pickup, Drop, Date, Type of Goods" rows="4"></textarea>
+          <div style="text-align:right"><button type="submit">Send</button></div>
+        </form>
+      </aside>
+    </section>
+
+    <footer>
+      © <span id="year"></span> Rakesh Transport — All rights reserved<br>
+      Built with care • Kanpur, India
+    </footer>
+  </div>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
