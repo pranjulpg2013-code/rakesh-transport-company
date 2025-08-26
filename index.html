@@ -15,9 +15,7 @@
       --card: #fff;
       --icon: #ff9800;
     }
-    * {
-      box-sizing: border-box;
-    }
+    * { box-sizing: border-box; }
     body {
       font-family: 'Inter', system-ui, Segoe UI, Roboto, Arial;
       margin: 0;
@@ -28,7 +26,7 @@
     .container {
       max-width: 1150px;
       margin: 0 auto;
-      padding: 32px;
+      padding: 32px 16px;
     }
     header {
       display: flex;
@@ -65,15 +63,14 @@
     nav a:hover {
       color: var(--accent);
     }
-    /* Hero Section */
     .hero {
       display: grid;
-      grid-template-columns: 1fr 430px;
-      gap: 38px;
+      grid-template-columns: 1.25fr 0.85fr;
+      gap: 40px;
       background: #fff;
       border-radius: 18px;
       align-items: center;
-      padding: 38px 0;
+      padding: 42px 32px;
       box-shadow: 0 8px 32px #22223b11;
     }
     .eyebrow {
@@ -107,27 +104,31 @@
       display: flex;
       gap: 24px;
       margin-top: 30px;
+      flex-wrap: wrap;
     }
     .stat {
       background: #f8fafc;
-      padding: 16px;
+      padding: 16px 0;
       border-radius: 14px;
       text-align: center;
-      min-width: 100px;
+      min-width: 120px;
       box-shadow: 0 4px 18px #22223b13;
       font-weight: 600;
+      margin-bottom: 16px;
+      flex: 1;
     }
     .stat .small {
       color: var(--muted);
     }
     .card {
       background: var(--card);
-      padding: 22px;
+      padding: 18px;
       border-radius: 18px;
       box-shadow: 0 6px 24px #22223b10;
       text-align: center;
+      min-width: 0;
+      margin: 0;
     }
-    /* Services */
     #services {
       margin-top: 46px;
     }
@@ -147,6 +148,7 @@
       border-radius: 14px;
       box-shadow: 0 2px 8px #22223b11;
       text-align: center;
+      min-width: 0;
     }
     .service-icon {
       width: 52px;
@@ -172,7 +174,6 @@
       color: var(--muted);
       font-size: 15px;
     }
-    /* About & Contact */
     .two-col {
       display: grid;
       grid-template-columns: 1fr 420px;
@@ -203,22 +204,27 @@
       padding: 18px;
       box-shadow: 0 2px 6px #22223b09;
       margin-top: 18px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
     }
     .contact-form label {
       display: block;
       margin-bottom: 8px;
       font-weight: 700;
+      text-align: left;
     }
     .contact-form input,
     .contact-form textarea {
       width: 100%;
       padding: 10px;
-      margin-bottom: 14px;
+      margin-bottom: 10px;
       border-radius: 8px;
       border: 1px solid #d4dbe4;
       font-size: 16px;
     }
-    .contact-form button {
+    .contact-form button,
+    .contact-form a {
       padding: 11px 22px;
       background: var(--accent);
       color: #222;
@@ -227,8 +233,14 @@
       border-radius: 8px;
       box-shadow: 0 1px 5px #f5b70044;
       cursor: pointer;
+      text-decoration: none;
+      text-align: center;
+      display: inline-block;
+      margin-top: 5px;
     }
-    /* Footer */
+    .contact-form a:active {
+      background: #e0a900;
+    }
     footer {
       padding: 28px 0;
       color: var(--muted);
@@ -237,26 +249,47 @@
       text-align: center;
       margin-top: 46px;
     }
-    /* Responsive adjustments */
     img {
       max-width: 100%;
       height: auto;
+      border-radius: 10px;
+    }
+    @media (max-width: 1200px) {
+      .container {
+        max-width: 98vw;
+      }
+      .hero {
+        grid-template-columns: 2fr 1fr;
+      }
     }
     @media (max-width: 950px) {
+      .container {
+        padding: 16px;
+      }
       .hero,
       .two-col {
         grid-template-columns: 1fr;
+      }
+      .card {
+        margin-top: 32px;
+      }
+      .stats {
+        flex-wrap: wrap;
       }
       .services {
         grid-template-columns: repeat(2, 1fr);
       }
     }
-    @media (max-width: 590px) {
-      h1 {
-        font-size: 1.6rem;
+    @media (max-width: 768px) {
+      .container {
+        padding: 0 8px 24px 8px;
       }
-      #services h2 {
-        font-size: 1.2rem;
+      h1 {
+        font-size: 2.1rem;
+      }
+      .hero {
+        grid-template-columns: 1fr;
+        padding: 24px 0;
       }
       .services {
         grid-template-columns: 1fr;
@@ -268,6 +301,44 @@
       .service-icon svg {
         width: 28px;
         height: 28px;
+      }
+      .two-col {
+        grid-template-columns: 1fr;
+        gap: 24px;
+      }
+      .contact-form {
+        padding: 12px;
+        margin-top: 14px;
+      }
+      .pill {
+        flex-direction: column;
+        align-items: flex-start;
+        font-size: 15px;
+      }
+    }
+    @media (max-width: 480px) {
+      .container {
+        padding: 0 4px;
+      }
+      h1 {
+        font-size: 1.25rem;
+      }
+      #services h2 {
+        font-size: 1.1rem;
+      }
+      .card {
+        padding: 10px;
+      }
+      .contacts-form input,
+      .contacts-form textarea {
+        font-size: 14px;
+      }
+      .stat {
+        font-size: 15px;
+        min-width: 80px;
+      }
+      .services {
+        gap: 10px;
       }
     }
   </style>
@@ -303,7 +374,7 @@
       </div>
       <aside class="card">
         <!-- Truck-related image -->
-        <img src="https://images.unsplash.com/photo-1591768793355-74d04bb6608f?q=80&w=2944&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Blue and white truck on road" style="width:100%;border-radius:10px;display:block;margin-bottom:10px" />
+        <img src="https://images.unsplash.com/photo-1591768793355-74d04bb6608f?q=80&w=2944&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Blue and white truck on road" />
         <div style="font-weight:700">Service Area & Live Booking</div>
         <div class="small" style="color:var(--muted)">Kanpur, Rath, Mahoba, and all nearby cities. Real-time rates, instant booking & tracking transport platform.</div>
       </aside>
@@ -313,7 +384,6 @@
       <div class="services">
         <div class="service">
           <div class="service-icon">
-            <!-- Farm/industry icon -->
             <svg viewBox="0 0 24 24"><path d="M2 18v-4a6 6 0 0 1 6-6h8a6 6 0 0 1 6 6v4z" fill="#fff"/><circle cx="7" cy="12" r="3" fill="#fff"/></svg>
           </div>
           <div class="service-title">Agricultural, Cement, and Machinery</div>
@@ -321,7 +391,6 @@
         </div>
         <div class="service">
           <div class="service-icon">
-            <!-- Box/goods icon -->
             <svg viewBox="0 0 24 24"><rect x="3" y="9" width="18" height="13" rx="2" fill="#fff"/><rect x="8" y="3" width="8" height="6" rx="2" fill="#fff"/></svg>
           </div>
           <div class="service-title">Small & Large Goods</div>
@@ -329,7 +398,6 @@
         </div>
         <div class="service">
           <div class="service-icon">
-            <!-- Route icon -->
             <svg viewBox="0 0 24 24"><path d="M3 12h18M12 3v18" stroke="#fff" stroke-width="2" fill="none"/></svg>
           </div>
           <div class="service-title">Intercity and Local Routes</div>
@@ -337,7 +405,6 @@
         </div>
         <div class="service">
           <div class="service-icon">
-            <!-- Value icon -->
             <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="12" fill="#fff"/><path d="M8 15h8M8 9h8" stroke="#fff" stroke-width="2"/></svg>
           </div>
           <div class="service-title">Fleet and Added Value</div>
@@ -369,21 +436,29 @@
           <b>Service area:</b>
           <div style="margin-left:auto;color:var(--muted)">Kanpur, Rath, Mahoba & Nearby Cities</div>
         </div>
-        <form class="contact-form" action="mailto:gupta.anil735@gmail.com" method="GET">
+        <form class="contact-form" id="quoteForm" onsubmit="return false;">
           <label>Request a quote</label>
-          <input name="subject" placeholder="Subject (e.g. Transport Quote)" />
-          <textarea name="body" placeholder="Details: Pickup, Drop, Date, Type of Goods" rows="4"></textarea>
-          <div style="text-align:right"><button type="submit">Send</button></div>
+          <input id="wa_subject" placeholder="Subject (e.g. Transport Quote)" />
+          <textarea id="wa_details" placeholder="Details: Pickup, Drop, Date, Type of Goods" rows="4"></textarea>
+          <a href="#" onclick="sendWhatsApp();" id="waSendBtn">Send via WhatsApp</a>
         </form>
       </aside>
     </section>
     <footer>
-      © <span id="year"></span> Rakesh Transport — All rights reserved<br>
+      © <span id="year"></span> Rakesh Transport — All rights reserved<br />
       Built with care • Kanpur, India
     </footer>
   </div>
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
+    function sendWhatsApp() {
+      var num = "9198840521041";
+      var subject = document.getElementById('wa_subject').value;
+      var details = document.getElementById('wa_details').value;
+      var msg = encodeURIComponent(subject + "\n" + details);
+      var wa_link = "https://wa.me/" + num + "?text=" + msg;
+      window.open(wa_link, '_blank');
+    }
   </script>
 </body>
 </html>
